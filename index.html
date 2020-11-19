@@ -59,17 +59,17 @@
           <section>
             <h2 class="header">Mis proyectos</h2>
             <div class="carousel">
-              <div class="arrow arrow-left"></div>
+              <div class="arrow arrow-left" aria-label="backward button"></div>
               <div class="window">
                 <ul class="project-container">
                   <li ><button><img src="images/project1.png" alt="proyecto uno" class="project project1"></button></li>
                   <li><button><img src="images/project2.png" alt="proyecto dos"class="project project2"></button></li>
                   <li><button><img src="images/project3.png" alt="proyecto tres" class="project project3"></button></li>
-                  <li><button><img src="images/project4.png" alt="proyecto cuatro" class="project project4"></button></li>
-                  <li><button><img src="images/project5.png" alt="proyecto cinco" class="project project5"></button></li>
+                  <li aria-hidden="true"><button><img src="images/project4.png" alt="proyecto cuatro" class="project project4" ></button></li>
+                  <li aria-hidden="true"><button><img src="images/project5.png" alt="proyecto cinco" class="project project5" ></button></li>
                 </ul>
               </div>
-              <div class="arrow arrow-right"></div>
+              <div class="arrow arrow-right" aria-label="foward button"></div>
             </div>
           </section>
 
@@ -80,14 +80,14 @@
       <h2 class="header">Contacto</h2>
       <form class="form-container">
         <label for="Nombre">Nombre</label>
-        <input type="text" id="Nombre"/> <br />
+        <input type="text" id="Nombre" aria-label="Nombre"/> <br />
         <label for="Correo">Correo</label>
-        <input type="text" id="Correo" /> <br />
+        <input type="text" id="Correo" aria-label="Correo"/> <br />
         <div class="message-input">
           <label for="Mensaje">Mensaje</label>
-          <input type="text" id="Mensaje"/> <br />
+          <input type="text" id="Mensaje" aria-label="Mensaje"/> <br />
         </div>
-        <button class="send-button">Enviar</button>
+        <button class="send-button" aria-label="send button">Enviar</button>
       </form>
     </footer>
     <div class="notification">El formulario fue enviado sin errores</div>
