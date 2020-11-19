@@ -47,7 +47,7 @@ img {
   --verde: #7ac943;
 }
 
-body {
+body, header, section {
   align-items: center;
   background-color: var(--gris-medio);
   display: flex;
@@ -83,7 +83,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 24px 0;
-  width: 50%;
+  width: 100%;
 }
 
 .nav-item {
@@ -91,9 +91,15 @@ body {
   border-radius: 5px;
   display: flex;
   font-family: var(--secondary-font);
-  height: 30px;
+  height: auto;
   justify-content: center;
-  width: 33%;
+  min-width: 40%;
+  margin-left: 3px;
+}
+.nav-item a{
+  text-align: center;
+  text-decoration: none;
+  color: var(--blanco);
 }
 
 .nav-item:hover {
