@@ -138,6 +138,10 @@ body, header, section {
 .project-container li{
   display: inline-block;
 }
+.project-container li button{
+  background-color: #333333;
+  border-style: none;
+}
 .project {
   border-radius: 5px;
   border: 2px solid #000;
