@@ -124,6 +124,7 @@ main{
   display: flex;
   justify-content: space-around;
   margin: 32px auto 0;
+  width: 60%;
 }
 .social-media li{
   margin-left: 16px;
