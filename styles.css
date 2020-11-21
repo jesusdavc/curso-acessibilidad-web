@@ -67,10 +67,11 @@ body, header, section {
   background-color: #7ac943;
   color: var(--gris-medio);
   font-family: var(--secondary-font);
+  border: 5px solid var(--gris-oscuro);
   outline: none;
 }
 .skip-link:focus-within{
-  outline: 3px solid yellow;
+  outline: 3px solid var(--verde);
 }
 .header {
   color: var(--blanco);
