@@ -199,7 +199,7 @@ main{
 .project-container {
   left: 0;
   position: relative;
-  width: 1500px;
+  width: 1348px;
 }
 .project-container button{
   background: none;
@@ -238,7 +238,9 @@ main{
   transition: all 0.2s ease-in-out;
   width: 75px;
 }
-
+.arrow:focus-within{
+  outline: 3px solid var(--verde);
+}
 .arrow:hover {
   transform: scale(1.1);
 }
