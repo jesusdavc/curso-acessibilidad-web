@@ -216,7 +216,7 @@ main{
   background-color: #333333;
   border-style: none;
 }
-.project {
+.project-img {
   border-radius: 5px;
   border: 2px solid #000;
   display: inline-block;
@@ -286,7 +286,7 @@ input:focus-within{
 .label-form{
   color: var(--blanco);
 }
-.send-button {
+.send-button, .modal-button{
   align-items: center;
   background-color: var(--verde);
   border-radius: 5px;
@@ -302,6 +302,10 @@ input:focus-within{
 }
 .send-button:hover{
   color: var(--gris-medio);
+}
+.send-button:focus, .modal-button:focus{
+  border: 5px solid var(--gris-medio);
+  outline: 3px solid var(--verde);
 }
 
 .notification {
@@ -337,13 +341,16 @@ input:focus-within{
   border: 2px solid #000;
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: 600px;
   justify-content: center;
   position: fixed;
-  top: 15%;
+  top: 5%;
   width: 700px;
+  padding: 56px;
 }
-
+#modal-header:focus{  
+  outline: 3px solid var(--verde);
+}
 .modal-project-image {
   background: center / cover no-repeat url(./images/project1.png);
   border-radius: 5px;

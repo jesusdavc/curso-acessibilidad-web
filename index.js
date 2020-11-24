@@ -5,9 +5,10 @@ window.onload = () => {
     .querySelector(".send-button")
     .addEventListener("click", showNotification);
   document.querySelectorAll(".project").forEach(element => {
-    element.addEventListener("click", e => openModal(e));
+    element.addEventListener("click" , e => openModal(e));
   });
   document.body.addEventListener("click", e => closeModal(e));
+  document.body.addEventListener("keyup", e => ListenEscape(e));
 };
 
 /** Esta funcion se llama cuando la persona hace click en la fecha derecha del carousel para navegar a la derecha */
@@ -24,13 +25,13 @@ function clickRight() {
   switch (newValue) {
     case -270:
       document.querySelector('.project1').setAttribute("tabindex", "-1");
-      document.querySelector('project1-container').setAttribute("aria-hidden", true)
+      document.querySelector('project1-container').setAttribute("aria-hidden", "true")
       document.querySelector('project4-container').removeAttribute("aria-hidden")
       document.querySelector('.project4').removeAttribute("tabindex");
       break;
     case -540:
       document.querySelector('.project2').setAttribute("tabindex", "-1");
-      document.querySelector('project2-container').setAttribute("aria-hidden", true)
+      document.querySelector('project2-container').setAttribute("aria-hidden", "true")
       document.querySelector('project5-container').removeAttribute("aria-hidden")
       document.querySelector('.project5').removeAttribute("tabindex");
       break;
@@ -59,7 +60,7 @@ function clickLeft() {
       break;
     case 0:
       document.querySelector('.project4').setAttribute("tabindex", "-1");
-      document.querySelector('project4-container').setAttribute("aria-hidden", true)
+      document.querySelector('project4-container').setAttribute("aria-hidden", "true")
       document.querySelector('project1-container').removeAttribute("aria-hidden")
       document.querySelector('.project1').removeAttribute("tabindex");
       break;
@@ -76,9 +77,40 @@ function showNotification() {
   }, 3000);
 }
 
+// Funcion Escuchar Tecla Escape
+
+function ListenEscape(e){
+  if(e.keyCode === 27){
+    closeModal(e)
+  }
+}
+
+
 /** Esta funcion se llama cuando la persona hace click en cualquier porjecto del carousel */
 function openModal(e) {
   document.querySelector(".modal-container").style.display = "flex";
+  document.getElementById("modal-header").focus()
+  ImgClick(e)
+
+  function ImgClick(e){
+    // VALIDAR SI FUE CON EL TECLADO O CON CLICK
+    if (e.clientX === 0 && e.clientY === 0) {
+      // TECLADO
+      let IMG = e.srcElement.classList[0];
+      document
+        .querySelector("#img-modal")
+        .setAttribute("src", `./images/${IMG}.png`);
+    } 
+    else {
+      // CLICK
+      let IMG = e.srcElement.src;
+      document.querySelector("#img-modal").setAttribute("src", IMG);
+    }
+  //Logica aplicada por JuanGalvis linea 95 a 109
+  }
+
+
+
 }
 
 /** Esta funcion se llama para cerrar el modal */

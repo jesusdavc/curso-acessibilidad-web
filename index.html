@@ -69,11 +69,11 @@
               <button class="arrow arrow-left" aria-label="backward button"></button>
               <div class="window">
                 <ul class="project-container">
-                  <li class="project1-container"><button class="project1"><img src="images/project1.png" alt="proyecto uno" class="project "></button></li>
-                  <li class="project2-container"><button class="project2"><img src="images/project2.png" alt="proyecto dos"class="project"></button></li>
-                  <li class="project3-container"><button class="project3"><img src="images/project3.png" alt="proyecto tres" class="project"></button></li>
-                  <li class="project4-container" aria-hidden="true"><button class="project4" tabindex="-1"><img src="images/project4.png" alt="proyecto cuatro" class="project" ></button></li>
-                  <li class="project5-container" aria-hidden="true"><button class="project5" tabindex="-1"><img src="images/project5.png" alt="proyecto cinco" class="project " ></button></li>
+                  <li class="project1-container"><button class="project1 project"><img src="images/project1.png" alt="proyecto uno" class="project-img"></button></li>
+                  <li class="project2-container"><button class="project2 project"><img src="images/project2.png" alt="proyecto dos"class="project-img"></button></li>
+                  <li class="project3-container"><button class="project3 project"><img src="images/project3.png" alt="proyecto tres" class="project-img"></button></li>
+                  <li class="project4-container" aria-hidden="true"><button class="project4 project" tabindex="-1"><img src="images/project4.png" alt="proyecto cuatro" class="project-img" ></button></li>
+                  <li class="project5-container" aria-hidden="true"><button class="project5 project" tabindex="-1"><img src="images/project5.png" alt="proyecto cinco" class="project-img " ></button></li>
                 </ul>
               </div>
               <button class="arrow arrow-right" aria-label="foward button"></button>
@@ -98,10 +98,14 @@
       </form>
     </footer>
     <div class="notification">El formulario fue enviado sin errores</div>
+    
+    
     <div class="modal-container">
       <div class="modal">
-        Ejemplo de un proyecto mio
-        <div class="modal-project-image"></div>
+        <h2 class="header" id="modal-header" tabindex="0">Ejemplo de un proyecto mio
+        </h2>        
+        <img src="" id="img-modal" class="modal-project-image" alt="ScreenShot del Proyecto">
+        <button class="modal-button">Cerrar</button>
       </div>
     </div>
 
