@@ -85,9 +85,12 @@
 
     <footer class="contact-section" id="Contacto">
       <h2 class="header">Contacto</h2>
+      <p class="intro">Aquí puedes escribirme un mensaje.</p>
       <form class="form-container">
         <label class="label-form" for="Nombre">Nombre</label>
-        <input type="text" id="Nombre" aria-label="Nombre"/> <br />
+        <input type="text" id="Nombre" aria-label="Nombre"/> 
+        <span aria-live="assertive" id="name-error"></span>
+        <br />
         <label class="label-form" for="Correo">Correo</label>
         <input type="text" id="Correo" aria-label="Correo"/> <br />
         <div class="message-input">
@@ -97,7 +100,7 @@
         <button class="send-button" aria-label="send button">Enviar</button>
       </form>
     </footer>
-    <div class="notification">El formulario fue enviado sin errores</div>
+    <div aria-live="assertive" class="notification"></div>
     
     
     <div class="modal-container">

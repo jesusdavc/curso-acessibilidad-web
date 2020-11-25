@@ -3,7 +3,7 @@ window.onload = () => {
   document.querySelector(".arrow-left").addEventListener("click", clickLeft);
   document
     .querySelector(".send-button")
-    .addEventListener("click", showNotification);
+    .addEventListener("click", e => ValidateForm(e));
   document.querySelectorAll(".project").forEach(element => {
     element.addEventListener("click" , e => openModal(e));
   });
@@ -68,10 +68,22 @@ function clickLeft() {
       break;
   }
 }
-
+/**Validar el formulario antes de mostar la notificacion */
+function ValidateForm(e){
+  e.preventDefault()
+  const nameField = document.getElementById("Nombre")
+  if(nameField.value === ""){
+    document.getElementById("name-error").innerHTML = "! Por favor llena el campo con un nombre"
+  }else{
+    showNotification()
+  }
+}
 /** Esta funcion se llama cuando la persona hace click en el boton de enviar del formulario de contacto */
 function showNotification() {
+  document.getElementById("Nombre").innerHTML = ""
+  document.querySelector(".form-container").reset(); 
   document.querySelector(".notification").style.display = "flex";
+  document.querySelector(".notification").innerHTML = "El formulario fue enviado sin errores"
   setTimeout(function() {
     document.querySelector(".notification").style.display = "none";
   }, 3000);
